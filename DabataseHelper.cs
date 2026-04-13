@@ -52,6 +52,7 @@ namespace KutuphaneProje
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Kitaplar", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Her satırı okuyup Kitap nesnesine dönüştürüyoruz
+                // yardım alındı
                 while (reader.Read())
                 {
                     kitaplar.Add(new Kitap
@@ -129,8 +130,9 @@ namespace KutuphaneProje
             {
                 con.Open();
                 // Ödünç kaydını Oduncler tablosuna ekliyoruz
+                //düzeltme yapıldı
                 SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO Oduncler (UyeNo, ISBN, TeslimTarihi) VALUES (@UyeNo, @ISBN, @Tarih)", con);
+                    "INSERT INTO Oduncler (UyeNo, ISBN, Tarih) VALUES (@UyeNo, @ISBN, @Tarih)", con);
                 cmd.Parameters.AddWithValue("@UyeNo", uyeNo);
                 cmd.Parameters.AddWithValue("@ISBN", isbn);
                 cmd.Parameters.AddWithValue("@Tarih", DateTime.Now.AddDays(15));
