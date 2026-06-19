@@ -5,7 +5,7 @@ namespace KutuphaneProje
     internal class DatabaseHelper
     {
         // Veritabanı bağlantı bilgileri — sunucu adı, veritabanı adı ve güvenlik ayarları
-        private static string connectionString = "Server=BAŞAR\\SQLEXPRESS;Database=KutuphaneDB;Trusted_Connection=True;TrustServerCertificate=True;";
+        private static string connectionString = "Server=BAŞAR\\SQLEXPRESS01;Database=KutuphaneDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
         // --- KİTAP İŞLEMLERİ ---
         // yardım alındı
